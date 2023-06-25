@@ -1,10 +1,10 @@
 import 'modern-normalize';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, StyleSheetManager } from 'styled-components';
 import { useSelector } from 'react-redux';
 import { selectCurrentTheme } from 'redux/selectors';
 import { GlobalStyles } from './GlobalStyles';
 
-const lightTheme = {
+const lightThemeColors = {
   bgColors: {
     mainBg: '#FFFFFF',
     linksBg: '#C5CAE9',
@@ -15,7 +15,7 @@ const lightTheme = {
   },
 };
 
-const darkTheme = {
+const darkThemeColors = {
   bgColors: {
     mainBg: '#303030',
     linksBg: '#C5CAE9',
@@ -34,18 +34,21 @@ const otherColors = {
 };
 
 export const Themes = ({ children }) => {
+  const darkTheme = { ...darkThemeColors, ...otherColors };
+  const lightTheme = { ...lightThemeColors, ...otherColors };
+
   const currentTheme = useSelector(selectCurrentTheme);
 
-  const theme = (checkTheme = true) => {
-    return checkTheme
-      ? { ...lightTheme, ...otherColors }
-      : { ...darkTheme, ...otherColors };
+  const theme = currentTheme => {
+    return currentTheme ? lightTheme : darkTheme;
   };
 
   return (
     <ThemeProvider theme={theme(currentTheme)}>
-      <GlobalStyles />
-      {children}
+      <StyleSheetManager shouldForwardProp={theme}>
+        <GlobalStyles />
+        {children}
+      </StyleSheetManager>
     </ThemeProvider>
   );
 };

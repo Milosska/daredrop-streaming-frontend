@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { Navigation } from 'components/Navigation/Navigation';
+import { NavBar } from 'components/Navigation/NavBar/NavBar';
+import { Container } from './GeneralLayout.styled';
 
 export const GeneralLayout = () => {
   return (
-    <>
+    <Container>
       <header>
-        <Navigation />
+        <NavBar />
       </header>
       <main>
         <Suspense fallback={<div>Loading...</div>}>
@@ -15,6 +16,6 @@ export const GeneralLayout = () => {
         </Suspense>
       </main>
       <footer>Footer</footer>
-    </>
+    </Container>
   );
 };
