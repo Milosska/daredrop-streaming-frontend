@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/452.a06b16c1.chunk.js","mappings":"kKAIA,UAJsB,WACpB,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,iBACd,C","sources":["pages/StreamersPage/StreamersPage.jsx"],"sourcesContent":["const StreamersPage = () => {\n  return <div>StreamersPage</div>;\n};\n\nexport default StreamersPage;\n"],"names":["_jsx","children"],"sourceRoot":""}
