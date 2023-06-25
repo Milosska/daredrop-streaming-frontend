@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/daredrop-streaming-frontend/static/css/main.7cda0caf.css",
+    "main.js": "/daredrop-streaming-frontend/static/js/main.821c4ff4.js",
+    "static/media/Montserrat-Medium.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
+    "static/media/Montserrat-Bold.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
+    "static/media/Montserrat-Regular.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "index.html": "/daredrop-streaming-frontend/index.html",
+    "main.7cda0caf.css.map": "/daredrop-streaming-frontend/static/css/main.7cda0caf.css.map",
+    "main.821c4ff4.js.map": "/daredrop-streaming-frontend/static/js/main.821c4ff4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cda0caf.css",
+    "static/js/main.821c4ff4.js"
+  ]
+}
