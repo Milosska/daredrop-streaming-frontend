@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { MdMenu, MdClose, MdHome, MdPeopleAlt } from 'react-icons/md';
+
+import { ThemeToggler } from 'components/Layout/ThemeToggler/ThemeToggler';
 import {
+  ContentThumb,
   ToggleBtn,
   MenuContainer,
   List,
@@ -17,19 +20,20 @@ export const MobileMenu = () => {
   return (
     <>
       {!isOpen ? (
-        <ToggleBtn
-          //   open={isOpen}
-          onClick={handleToggle}
-          aria-expanded="false"
-          aria-controls="mobile-menu-open"
-          type="button"
-        >
-          <MdMenu />
-        </ToggleBtn>
+        <ContentThumb>
+          <ThemeToggler />
+          <ToggleBtn
+            onClick={handleToggle}
+            aria-expanded="false"
+            aria-controls="mobile-menu-open"
+            type="button"
+          >
+            <MdMenu />
+          </ToggleBtn>
+        </ContentThumb>
       ) : (
         <MenuContainer open={isOpen}>
           <ToggleBtn
-            // open={isOpen}
             type="button"
             onClick={handleToggle}
             aria-expanded="false"

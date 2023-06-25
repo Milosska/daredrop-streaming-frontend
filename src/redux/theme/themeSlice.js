@@ -12,6 +12,8 @@ export const themeSlice = createSlice({
   },
 });
 
+export const { toggleTheme } = themeSlice.actions;
+
 const themePersistConfig = {
   key: 'theme',
   storage,

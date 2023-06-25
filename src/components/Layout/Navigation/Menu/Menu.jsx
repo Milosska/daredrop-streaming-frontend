@@ -1,14 +1,18 @@
-import { List, StyledLink } from './Menu.styled';
+import { ThemeToggler } from 'components/Layout/ThemeToggler/ThemeToggler';
+import { Container, List, StyledLink } from './Menu.styled';
 
 export const Menu = () => {
   return (
-    <List>
-      <li>
-        <StyledLink to="/">Home</StyledLink>
-      </li>
-      <li>
-        <StyledLink to="/streamers">Streamers</StyledLink>
-      </li>
-    </List>
+    <Container>
+      <List>
+        <li>
+          <StyledLink to="/">Home</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/streamers">Streamers</StyledLink>
+        </li>
+      </List>
+      <ThemeToggler />
+    </Container>
   );
 };

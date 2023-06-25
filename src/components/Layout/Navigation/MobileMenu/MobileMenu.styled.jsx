@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+export const ContentThumb = styled.div`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+`;
+
 export const ToggleBtn = styled.button`
   display: flex;
   justify-content: center;
