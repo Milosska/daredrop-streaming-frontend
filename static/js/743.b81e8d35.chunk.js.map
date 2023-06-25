@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/743.b81e8d35.chunk.js","mappings":"kKAIA,UAJmB,WACjB,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,cACd,C","sources":["pages/RecordPage/RecordPage.jsx"],"sourcesContent":["const RecordPage = () => {\n  return <div>RecordPage</div>;\n};\n\nexport default RecordPage;\n"],"names":["_jsx","children"],"sourceRoot":""}

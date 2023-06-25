@@ -1,16 +1,24 @@
 {
   "files": {
     "main.css": "/daredrop-streaming-frontend/static/css/main.7cda0caf.css",
-    "main.js": "/daredrop-streaming-frontend/static/js/main.821c4ff4.js",
+    "main.js": "/daredrop-streaming-frontend/static/js/main.13a9a0d9.js",
+    "static/js/680.390a86cc.chunk.js": "/daredrop-streaming-frontend/static/js/680.390a86cc.chunk.js",
+    "static/js/452.5c8cc2dc.chunk.js": "/daredrop-streaming-frontend/static/js/452.5c8cc2dc.chunk.js",
+    "static/js/743.b81e8d35.chunk.js": "/daredrop-streaming-frontend/static/js/743.b81e8d35.chunk.js",
+    "static/js/794.7993f629.chunk.js": "/daredrop-streaming-frontend/static/js/794.7993f629.chunk.js",
     "static/media/Montserrat-Medium.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
     "static/media/Montserrat-Regular.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "index.html": "/daredrop-streaming-frontend/index.html",
     "main.7cda0caf.css.map": "/daredrop-streaming-frontend/static/css/main.7cda0caf.css.map",
-    "main.821c4ff4.js.map": "/daredrop-streaming-frontend/static/js/main.821c4ff4.js.map"
+    "main.13a9a0d9.js.map": "/daredrop-streaming-frontend/static/js/main.13a9a0d9.js.map",
+    "680.390a86cc.chunk.js.map": "/daredrop-streaming-frontend/static/js/680.390a86cc.chunk.js.map",
+    "452.5c8cc2dc.chunk.js.map": "/daredrop-streaming-frontend/static/js/452.5c8cc2dc.chunk.js.map",
+    "743.b81e8d35.chunk.js.map": "/daredrop-streaming-frontend/static/js/743.b81e8d35.chunk.js.map",
+    "794.7993f629.chunk.js.map": "/daredrop-streaming-frontend/static/js/794.7993f629.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.821c4ff4.js"
+    "static/js/main.13a9a0d9.js"
   ]
 }
