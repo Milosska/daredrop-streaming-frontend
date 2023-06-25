@@ -15,6 +15,8 @@ export const StyledLink = styled(NavLink)`
   padding: 5px 15px;
   background-color: transparent;
   border-radius: 37.5px;
+
+  font-family: 'MontserratMedium', sans-serif;
   color: ${props => props.theme.textColors.mainText};
 
   &.active {

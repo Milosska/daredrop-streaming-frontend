@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { GeneralLayout } from 'components/GeneralLayout/GeneralLayout';
+import { GeneralLayout } from 'components/Layout/GeneralLayout/GeneralLayout';
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const StreamersPage = lazy(() => import('pages/StreamersPage/StreamersPage'));
 const RecordPage = lazy(() => import('pages/RecordPage/RecordPage'));

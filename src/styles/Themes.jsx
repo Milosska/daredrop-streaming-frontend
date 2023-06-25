@@ -7,7 +7,6 @@ import { GlobalStyles } from './GlobalStyles';
 const lightThemeColors = {
   bgColors: {
     mainBg: '#FFFFFF',
-    linksBg: '#C5CAE9',
   },
   textColors: {
     mainText: '#000000',
@@ -18,7 +17,6 @@ const lightThemeColors = {
 const darkThemeColors = {
   bgColors: {
     mainBg: '#303030',
-    linksBg: '#C5CAE9',
   },
   textColors: {
     mainText: '#FFFFFF',
@@ -29,6 +27,8 @@ const darkThemeColors = {
 const otherColors = {
   commonColors: {
     accentElemBg: '#E91E63',
+    linksBg: '#C5CAE9',
+    socialsBg: '#0000001F',
     contrastText: '#FFFFFF',
   },
 };

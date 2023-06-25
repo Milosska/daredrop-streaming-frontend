@@ -54,6 +54,7 @@ export const StyledLink = styled(NavLink)`
   padding: 10px;
   cursor: pointer;
 
+  font-family: 'MontserratMedium', sans-serif;
   color: ${props => props.theme.textColors.mainText};
 
   &.active {

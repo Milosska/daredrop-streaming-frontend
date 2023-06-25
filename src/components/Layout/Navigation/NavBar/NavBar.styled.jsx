@@ -11,6 +11,6 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledImage = styled.img`
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
 `;

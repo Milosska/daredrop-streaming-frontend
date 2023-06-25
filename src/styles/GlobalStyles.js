@@ -35,8 +35,8 @@ body {
   font-family: "MontserratRegular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: ${props => props.theme.bgColors.mainBg};
-  color:${props => props.theme.textColors.mainText};
+  background-color: ${({ theme }) => theme.bgColors.mainBg};
+  color:${({ theme }) => theme.textColors.mainText};
 }
 
 h1,
@@ -58,6 +58,8 @@ img {
 
 ul {
   list-style: none;
+  margin:0;
+    padding: 0;
 }
 
 a {
