@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/daredrop-streaming-frontend/static/css/main.7cda0caf.css",
-    "main.js": "/daredrop-streaming-frontend/static/js/main.13a9a0d9.js",
+    "main.js": "/daredrop-streaming-frontend/static/js/main.e3f79e82.js",
     "static/js/680.390a86cc.chunk.js": "/daredrop-streaming-frontend/static/js/680.390a86cc.chunk.js",
     "static/js/452.5c8cc2dc.chunk.js": "/daredrop-streaming-frontend/static/js/452.5c8cc2dc.chunk.js",
     "static/js/743.b81e8d35.chunk.js": "/daredrop-streaming-frontend/static/js/743.b81e8d35.chunk.js",
@@ -11,7 +11,7 @@
     "static/media/Montserrat-Regular.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "index.html": "/daredrop-streaming-frontend/index.html",
     "main.7cda0caf.css.map": "/daredrop-streaming-frontend/static/css/main.7cda0caf.css.map",
-    "main.13a9a0d9.js.map": "/daredrop-streaming-frontend/static/js/main.13a9a0d9.js.map",
+    "main.e3f79e82.js.map": "/daredrop-streaming-frontend/static/js/main.e3f79e82.js.map",
     "680.390a86cc.chunk.js.map": "/daredrop-streaming-frontend/static/js/680.390a86cc.chunk.js.map",
     "452.5c8cc2dc.chunk.js.map": "/daredrop-streaming-frontend/static/js/452.5c8cc2dc.chunk.js.map",
     "743.b81e8d35.chunk.js.map": "/daredrop-streaming-frontend/static/js/743.b81e8d35.chunk.js.map",
@@ -19,6 +19,6 @@
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.13a9a0d9.js"
+    "static/js/main.e3f79e82.js"
   ]
 }
