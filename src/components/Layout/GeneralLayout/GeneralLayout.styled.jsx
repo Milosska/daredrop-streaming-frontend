@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
 
-  background-color: ${({ theme }) => theme.bgColors.mainBg};
+  background-color: transparent;
   color: ${({ theme }) => theme.textColors.mainText};
 `;
 
