@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdaredrop_streaming_frontend=self.webpackChunkdaredrop_streaming_frontend||[]).push([[680],{680:function(e,n,r){r.r(n);var t=r(329);n.default=function(){return(0,t.jsx)("div",{children:"HomePage"})}}}]);
-//# sourceMappingURL=680.e90cb75e.chunk.js.map
