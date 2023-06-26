@@ -1,16 +1,12 @@
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useWindowSize } from 'react-use';
-
-import * as logo from 'assets/images/logo-min.png';
-import * as bigLogo from 'assets/images/logo@2x-min.png';
 
 import { SocialList } from '../SocialsList/SocialList';
 import { SubscribeForm } from '../SubscribeForm/SubscribeForm';
+import { Logo } from 'components/Logo/Logo';
 import {
   StyledFooter,
   LogoThumb,
-  StyledLogoImg,
-  StyledLogoTitle,
   StyledCopyright,
   StyledCopyrightLink,
   InfoThumb,
@@ -25,16 +21,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <LogoThumb>
-        <NavLink to="/">
-          <StyledLogoImg
-            srcSet={`${logo.default} 1x, ${bigLogo.default} 2x`}
-            src={logo.default}
-            alt="Web-app logo img"
-            width="95"
-            height="95"
-          />
-        </NavLink>
-        <StyledLogoTitle>Video</StyledLogoTitle>
+        <Logo />
         <StyledCopyright>All rights reserved</StyledCopyright>
         <StyledCopyrightLink
           href="https://github.com/Milosska"

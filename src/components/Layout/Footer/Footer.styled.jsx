@@ -23,28 +23,6 @@ export const LogoThumb = styled.div`
   text-align: center;
 `;
 
-export const StyledLogoImg = styled.img`
-  width: 55px;
-  height: 55px;
-  margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-    width: 95px;
-    height: 95px;
-  }
-`;
-
-export const StyledLogoTitle = styled.p`
-  margin-bottom: 10px;
-  font-family: 'MontserratBold';
-  font-size: 24px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 15px;
-    font-size: 32px;
-  }
-`;
-
 export const StyledCopyright = styled.p`
   font-size: 14px;
   line-height: 1.42;

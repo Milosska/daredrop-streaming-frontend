@@ -7,6 +7,7 @@ import { GlobalStyles } from './GlobalStyles';
 const lightThemeColors = {
   bgColors: {
     mainBg: '#FFFFFF',
+    overlayBg: 'rgba(255, 255, 255, 0.7)',
   },
   textColors: {
     mainText: '#000000',
@@ -17,6 +18,7 @@ const lightThemeColors = {
 const darkThemeColors = {
   bgColors: {
     mainBg: '#303030',
+    overlayBg: 'rgba(48, 48, 48, 0.7)',
   },
   textColors: {
     mainText: '#FFFFFF',
