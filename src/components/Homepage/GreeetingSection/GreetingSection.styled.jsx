@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export const Container = styled.section`
   position: relative;
@@ -53,27 +52,4 @@ export const Header = styled.h1`
 
 export const GreetingText = styled.p`
   align-self: start;
-`;
-
-export const StyledLink = styled(NavLink)`
-  display: inline-block;
-  padding: 10px 20px;
-
-  background-color: ${({ theme }) => theme.commonColors.accentElemBg};
-  box-shadow: 0px 0px 49px -2px rgba(0, 0, 0, 0.25);
-  border-radius: 37.5px;
-
-  font-family: 'MontserratMedium', sans-serif;
-  font-size: 22px;
-  color: ${({ theme }) => theme.commonColors.contrastText};
-
-  transform: scale(1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background-color: #304ffe;
-    transform: scale(1.1);
-  }
 `;

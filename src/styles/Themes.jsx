@@ -32,6 +32,7 @@ const otherColors = {
     linksBg: '#C5CAE9',
     socialsBg: '#0000001F',
     contrastText: '#FFFFFF',
+    errorCodeText: '#880e4f',
   },
 };
 

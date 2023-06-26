@@ -1,12 +1,11 @@
 import { Logo } from 'components/Logo/Logo';
-
+import { NavLinkBtn } from 'components/NavLinkBtn/NavLinkBtn';
 import {
   Container,
   TextThumb,
   GreetingThumb,
   Header,
   GreetingText,
-  StyledLink,
 } from './GreetingSection.styled';
 
 export const GreetingSection = () => {
@@ -18,8 +17,7 @@ export const GreetingSection = () => {
           <Header>Wellcome to our service</Header>
           <GreetingText>We are glad to see you!</GreetingText>
         </GreetingThumb>
-
-        <StyledLink to="/streamers">Go to streamers</StyledLink>
+        <NavLinkBtn direction={'/streamers'} text={'Go to streamers'} />
       </TextThumb>
     </Container>
   );
