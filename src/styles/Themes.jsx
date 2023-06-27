@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 import { selectCurrentTheme } from 'redux/selectors';
 import { GlobalStyles } from './GlobalStyles';
 
+import * as formBgLight from 'assets/images/main/form_bg_light.jpg';
+import * as formBgDark from 'assets/images/main/form_bg_dark.jpg';
+
 const lightThemeColors = {
   bgColors: {
     mainBg: '#FFFFFF',
@@ -12,6 +15,9 @@ const lightThemeColors = {
   textColors: {
     mainText: '#000000',
     accentText: '#304FFE',
+  },
+  bgImages: {
+    streamerFormBg: `url(${formBgLight.default})`,
   },
 };
 
@@ -24,6 +30,9 @@ const darkThemeColors = {
     mainText: '#FFFFFF',
     accentText: '#C5CAE9',
   },
+  bgImages: {
+    streamerFormBg: `url(${formBgDark.default})`,
+  },
 };
 
 const otherColors = {
@@ -33,6 +42,8 @@ const otherColors = {
     socialsBg: '#0000001F',
     contrastText: '#FFFFFF',
     errorCodeText: '#880e4f',
+    inputErrorText: '#DA1414',
+    inputCorrectText: '#3CBC81',
   },
 };
 

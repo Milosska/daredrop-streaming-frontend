@@ -12,18 +12,12 @@ const setBgImage = theme => {
 };
 
 const setBigBgImage = theme => {
-  return theme === '/register'
-    ? `linear-gradient(
+  return `linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.7) 61.48%
+      ${theme.bgColors.overlayBg} 0%,
+     ${theme.bgColors.overlayBg} 61.48%
     ),
-    url(${bigHeroBg.default})`
-    : `linear-gradient(
-      180deg,
-      rgba(48, 48, 48, 0.5) 0%,
-      rgba(48, 48, 48, 0.7) 61.48%
-    ), url(${bigHeroBg.default})`;
+    url(${bigHeroBg.default})`;
 };
 
 export const HeroHeaderBg = styled.div`
@@ -32,7 +26,7 @@ export const HeroHeaderBg = styled.div`
   left: -10%;
   z-index: -1;
   width: 120%;
-  height: 450px;
+  height: 400px;
 
   background-color: #f18585;
   background-image: ${prop => setBgImage(prop.theme)};
@@ -48,6 +42,10 @@ export const HeroHeaderBg = styled.div`
     (min-resolution: 2dppx) {
     background-image: ${prop => setBigBgImage(prop.theme)};
   }
+
+  @media screen and (min-width: 768px) {
+    height: 550px;
+  }
 `;
 
 export const HeroSection = styled.section`
@@ -56,16 +54,57 @@ export const HeroSection = styled.section`
   gap: 5px;
   justify-content: center;
 
-  height: 180px;
+  height: 120px;
+  padding: 0 40px;
+
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    height: 140px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 180px;
+  }
 `;
 
 export const HeroSubtitle = styled.p`
   font-family: 'MontserratMedium';
-  font-size: 18px;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 `;
 
-export const HeroTitle = styled.h2`
+export const HeroTitle = styled.h1`
   font-family: 'MontserratBold';
-  font-size: 38px;
+  font-size: 22px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 38px;
+  }
+`;
+
+export const FormSection = styled.section``;
+
+export const FormSectionTitle = styled.h2`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 `;
