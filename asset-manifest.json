@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/daredrop-streaming-frontend/static/css/main.647f4c7a.css",
-    "main.js": "/daredrop-streaming-frontend/static/js/main.a6fe8573.js",
-    "static/js/913.6634b063.chunk.js": "/daredrop-streaming-frontend/static/js/913.6634b063.chunk.js",
-    "static/js/771.187d3cca.chunk.js": "/daredrop-streaming-frontend/static/js/771.187d3cca.chunk.js",
+    "main.js": "/daredrop-streaming-frontend/static/js/main.d2195d61.js",
+    "static/js/913.b4d86d22.chunk.js": "/daredrop-streaming-frontend/static/js/913.b4d86d22.chunk.js",
+    "static/js/883.ed83d59e.chunk.js": "/daredrop-streaming-frontend/static/js/883.ed83d59e.chunk.js",
     "static/js/743.00f831bf.chunk.js": "/daredrop-streaming-frontend/static/js/743.00f831bf.chunk.js",
-    "static/js/960.d2c0ac3e.chunk.js": "/daredrop-streaming-frontend/static/js/960.d2c0ac3e.chunk.js",
+    "static/js/960.7d82d11a.chunk.js": "/daredrop-streaming-frontend/static/js/960.7d82d11a.chunk.js",
+    "static/js/946.91b75c15.chunk.js": "/daredrop-streaming-frontend/static/js/946.91b75c15.chunk.js",
     "static/media/bgvideo.mp4": "/daredrop-streaming-frontend/static/media/bgvideo.1d775e206c94140ad9c0.mp4",
     "static/media/hero@2x-min.jpg": "/daredrop-streaming-frontend/static/media/hero@2x-min.02573101bc8c352fe1b7.jpg",
     "static/media/not_found@2x-min.png": "/daredrop-streaming-frontend/static/media/not_found@2x-min.06241859d38316051d88.png",
@@ -14,16 +15,22 @@
     "static/media/Montserrat-Regular.ttf": "/daredrop-streaming-frontend/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "static/media/hero-min.jpg": "/daredrop-streaming-frontend/static/media/hero-min.0bb98bdbb6f6d2131062.jpg",
     "static/media/not_found-min.png": "/daredrop-streaming-frontend/static/media/not_found-min.78d6b813f3bd542c951d.png",
+    "static/media/form_bg_dark.jpg": "/daredrop-streaming-frontend/static/media/form_bg_dark.1d7a7589b8231f858f99.jpg",
+    "static/media/tiktok-min.png": "/daredrop-streaming-frontend/static/media/tiktok-min.10be58f813c5eefbf795.png",
+    "static/media/form_bg_light.jpg": "/daredrop-streaming-frontend/static/media/form_bg_light.70e0545dcc6214fb849d.jpg",
+    "static/media/rumble-min.png": "/daredrop-streaming-frontend/static/media/rumble-min.694a71860f9a1bcebd7e.png",
+    "static/media/kick-min.png": "/daredrop-streaming-frontend/static/media/kick-min.9426f901dbd98e4585a2.png",
     "index.html": "/daredrop-streaming-frontend/index.html",
     "main.647f4c7a.css.map": "/daredrop-streaming-frontend/static/css/main.647f4c7a.css.map",
-    "main.a6fe8573.js.map": "/daredrop-streaming-frontend/static/js/main.a6fe8573.js.map",
-    "913.6634b063.chunk.js.map": "/daredrop-streaming-frontend/static/js/913.6634b063.chunk.js.map",
-    "771.187d3cca.chunk.js.map": "/daredrop-streaming-frontend/static/js/771.187d3cca.chunk.js.map",
+    "main.d2195d61.js.map": "/daredrop-streaming-frontend/static/js/main.d2195d61.js.map",
+    "913.b4d86d22.chunk.js.map": "/daredrop-streaming-frontend/static/js/913.b4d86d22.chunk.js.map",
+    "883.ed83d59e.chunk.js.map": "/daredrop-streaming-frontend/static/js/883.ed83d59e.chunk.js.map",
     "743.00f831bf.chunk.js.map": "/daredrop-streaming-frontend/static/js/743.00f831bf.chunk.js.map",
-    "960.d2c0ac3e.chunk.js.map": "/daredrop-streaming-frontend/static/js/960.d2c0ac3e.chunk.js.map"
+    "960.7d82d11a.chunk.js.map": "/daredrop-streaming-frontend/static/js/960.7d82d11a.chunk.js.map",
+    "946.91b75c15.chunk.js.map": "/daredrop-streaming-frontend/static/js/946.91b75c15.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.647f4c7a.css",
-    "static/js/main.a6fe8573.js"
+    "static/js/main.d2195d61.js"
   ]
 }
