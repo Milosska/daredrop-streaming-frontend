@@ -47,7 +47,7 @@ const otherColors = {
     contrastText: '#FFFFFF',
     errorCodeText: '#880e4f',
     inputErrorText: '#DA1414',
-    inputCorrectText: '#3CBC81',
+    inputCorrectText: '#228054',
   },
 };
 

@@ -4,7 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import { GeneralLayout } from 'components/Layout/GeneralLayout/GeneralLayout';
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const StreamersPage = lazy(() => import('pages/StreamersPage/StreamersPage'));
-const RecordPage = lazy(() => import('pages/RecordPage/RecordPage'));
+const StreamerRecordPage = lazy(() =>
+  import('pages/StreamerRecordPage/StreamerRecordPage')
+);
 const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
@@ -15,7 +17,10 @@ export const App = () => {
           <Route path="/" element={<GeneralLayout />}>
             <Route index element={<HomePage />} />
             <Route path="/streamers" element={<StreamersPage />} />
-            <Route path="/record/:recordId" element={<RecordPage />} />
+            <Route
+              path="/streamers/:streamersId"
+              element={<StreamerRecordPage />}
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
