@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/daredrop-streaming-frontend/static/css/main.647f4c7a.css",
-    "main.js": "/daredrop-streaming-frontend/static/js/main.b596d396.js",
+    "main.js": "/daredrop-streaming-frontend/static/js/main.5e1b0509.js",
     "static/js/913.829ceb03.chunk.js": "/daredrop-streaming-frontend/static/js/913.829ceb03.chunk.js",
-    "static/js/701.18a9016b.chunk.js": "/daredrop-streaming-frontend/static/js/701.18a9016b.chunk.js",
-    "static/js/814.645905d3.chunk.js": "/daredrop-streaming-frontend/static/js/814.645905d3.chunk.js",
+    "static/js/659.4e74760a.chunk.js": "/daredrop-streaming-frontend/static/js/659.4e74760a.chunk.js",
+    "static/js/196.06b39481.chunk.js": "/daredrop-streaming-frontend/static/js/196.06b39481.chunk.js",
     "static/js/960.4e3a469b.chunk.js": "/daredrop-streaming-frontend/static/js/960.4e3a469b.chunk.js",
-    "static/js/274.3cde4f57.chunk.js": "/daredrop-streaming-frontend/static/js/274.3cde4f57.chunk.js",
+    "static/js/384.0d730f45.chunk.js": "/daredrop-streaming-frontend/static/js/384.0d730f45.chunk.js",
+    "static/js/448.4eebfc8e.chunk.js": "/daredrop-streaming-frontend/static/js/448.4eebfc8e.chunk.js",
     "static/media/bgvideo.mp4": "/daredrop-streaming-frontend/static/media/bgvideo.1d775e206c94140ad9c0.mp4",
     "static/media/hero@2x-min.jpg": "/daredrop-streaming-frontend/static/media/hero@2x-min.02573101bc8c352fe1b7.jpg",
     "static/media/not_found@2x-min.png": "/daredrop-streaming-frontend/static/media/not_found@2x-min.06241859d38316051d88.png",
@@ -24,15 +25,16 @@
     "static/media/streamers_bg-min.png": "/daredrop-streaming-frontend/static/media/streamers_bg-min.e54cfcfedbde8c0def37.png",
     "index.html": "/daredrop-streaming-frontend/index.html",
     "main.647f4c7a.css.map": "/daredrop-streaming-frontend/static/css/main.647f4c7a.css.map",
-    "main.b596d396.js.map": "/daredrop-streaming-frontend/static/js/main.b596d396.js.map",
+    "main.5e1b0509.js.map": "/daredrop-streaming-frontend/static/js/main.5e1b0509.js.map",
     "913.829ceb03.chunk.js.map": "/daredrop-streaming-frontend/static/js/913.829ceb03.chunk.js.map",
-    "701.18a9016b.chunk.js.map": "/daredrop-streaming-frontend/static/js/701.18a9016b.chunk.js.map",
-    "814.645905d3.chunk.js.map": "/daredrop-streaming-frontend/static/js/814.645905d3.chunk.js.map",
+    "659.4e74760a.chunk.js.map": "/daredrop-streaming-frontend/static/js/659.4e74760a.chunk.js.map",
+    "196.06b39481.chunk.js.map": "/daredrop-streaming-frontend/static/js/196.06b39481.chunk.js.map",
     "960.4e3a469b.chunk.js.map": "/daredrop-streaming-frontend/static/js/960.4e3a469b.chunk.js.map",
-    "274.3cde4f57.chunk.js.map": "/daredrop-streaming-frontend/static/js/274.3cde4f57.chunk.js.map"
+    "384.0d730f45.chunk.js.map": "/daredrop-streaming-frontend/static/js/384.0d730f45.chunk.js.map",
+    "448.4eebfc8e.chunk.js.map": "/daredrop-streaming-frontend/static/js/448.4eebfc8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.647f4c7a.css",
-    "static/js/main.b596d396.js"
+    "static/js/main.5e1b0509.js"
   ]
 }
