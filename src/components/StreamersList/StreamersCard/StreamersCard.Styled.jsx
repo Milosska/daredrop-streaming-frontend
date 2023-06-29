@@ -7,25 +7,34 @@ export const Container = styled.li`
   gap: 10px;
   justify-content: center;
 
-  width: 350px;
-  height: 250px;
+  width: 100%;
+  height: 280px;
   padding: 10px;
   border-radius: 8px;
 
-  font-size: 16px;
+  font-size: 14px;
 
   background-image: linear-gradient(
     315deg,
     rgba(233, 30, 99, 0.5) 0%,
     rgba(48, 79, 254, 0.5) 100%
   );
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    font-size: 16px;
+  }
 `;
 
 export const ImageThumb = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 115px;
   height: 45%;
 
   border-radius: 8px;
@@ -42,6 +51,16 @@ export const ImageThumb = styled.div`
   border-bottom-color: ${({ theme }) => theme.textColors.accentText};
 
   overflow: hidden;
+
+  @media screen and (min-width: 480px) {
+    width: 150px;
+    height: 55%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 130px;
+    height: 50%;
+  }
 `;
 
 export const StyledImg = styled.img`
@@ -59,6 +78,12 @@ export const InfoThumb = styled.div`
 
   width: 100%;
   height: 85%;
+
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const CardTitle = styled.h4`
@@ -67,16 +92,29 @@ export const CardTitle = styled.h4`
 
   color: ${({ theme }) => theme.textColors.accentText};
   font-family: 'MontserratBold';
-  font-size: 22px;
+  font-size: 18px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 export const StyledPlatform = styled.p`
   grid-row: 3 / 4;
   grid-column: 2 / 4;
+
+  font-family: 'MontserratMedium';
 `;
 
 export const StyledGenre = styled.p`
   grid-row: 4 / 5;
+  grid-column: 2 / 4;
+
+  font-family: 'MontserratMedium';
+`;
+
+export const StyledRating = styled.p`
+  grid-row: 5 / 6;
   grid-column: 2 / 4;
 `;
 
@@ -84,11 +122,15 @@ export const VoteThumb = styled.div`
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 10px;
+  column-gap: 5px;
   justify-items: center;
 
-  grid-row: 5 / 9;
+  grid-row: 6 / 9;
   grid-column: 1 / 4;
+
+  @media screen and (min-width: 768px) {
+    column-gap: 10px;
+  }
 `;
 
 export const UpvotesText = styled.p`
@@ -97,7 +139,11 @@ export const UpvotesText = styled.p`
   align-self: end;
 
   color: ${({ theme }) => theme.commonColors.inputCorrectText};
-  font-size: 20px;
+  font-size: 16px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 
   > svg {
     width: 20px;
@@ -121,7 +167,7 @@ export const UpvoteBtn = styled.button`
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 
-  min-width: 150px;
+  min-width: 100px;
   padding: 5px 20px;
 
   background-color: transparent;
@@ -138,10 +184,19 @@ export const UpvoteBtn = styled.button`
     color: ${({ theme }) => theme.commonColors.contrastText};
   }
 
+  @media screen and (min-width: 768px) {
+    min-width: 150px;
+  }
+
   > svg {
-    width: 22px;
-    height: 22px;
+    width: 15px;
+    height: 15px;
     margin-right: 5px;
+
+    @media screen and (min-width: 768px) {
+      width: 22px;
+      height: 22px;
+    }
   }
 `;
 

@@ -1,54 +1,6 @@
 import styled from 'styled-components';
-import * as heroBg from 'assets/images/main/hero-min.jpg';
-import * as bigHeroBg from 'assets/images/main/hero@2x-min.jpg';
 import * as streamersBg from 'assets/images/main/streamers_bg-min.png';
 import * as streamersBigBg from 'assets/images/main/streamers_bg@2x-min.png';
-
-const setBgImage = theme => {
-  return `linear-gradient(
-      180deg,
-      ${theme.bgColors.overlayBg} 0%,
-     ${theme.bgColors.overlayBg} 61.48%
-    ),
-    url(${heroBg.default})`;
-};
-
-const setBigBgImage = theme => {
-  return `linear-gradient(
-      180deg,
-      ${theme.bgColors.overlayBg} 0%,
-     ${theme.bgColors.overlayBg} 61.48%
-    ),
-    url(${bigHeroBg.default})`;
-};
-
-export const HeroHeaderBg = styled.div`
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  z-index: -1;
-  width: 120%;
-  height: 500px;
-
-  background-color: #f18585;
-  background-image: ${prop => setBgImage(prop.theme)};
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: ${prop => setBigBgImage(prop.theme)};
-  }
-
-  @media screen and (min-width: 768px) {
-    height: 600px;
-  }
-`;
 
 export const HeroSection = styled.section`
   display: flex;

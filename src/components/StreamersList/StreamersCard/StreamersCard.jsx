@@ -1,7 +1,9 @@
-import { NavLinkBtn } from 'components/NavLinkBtn/NavLinkBtn';
+import { fetchAPI } from 'helpers/backendAPI';
+
 import { ImArrowUp, ImArrowDown } from 'react-icons/im';
 import { FaRegThumbsUp, FaRegThumbsDown } from 'react-icons/fa';
 
+import { NavLinkBtn } from 'components/NavLinkBtn/NavLinkBtn';
 import {
   Container,
   ImageThumb,
@@ -10,6 +12,7 @@ import {
   CardTitle,
   StyledPlatform,
   StyledGenre,
+  StyledRating,
   UpvotesText,
   DownvotesText,
   VoteThumb,
@@ -18,8 +21,16 @@ import {
 } from './StreamersCard.Styled';
 
 export const StreamersCard = ({
-  streamer: { _id, name, photoURL, genre, platform, upvote, downvote },
+  streamer: { _id, name, photoURL, genre, platform, upvote, downvote, rating },
 }) => {
+  const handleUpvote = () => {
+    fetchAPI('put', `/api/streamers/${_id}/vote`, { upvote: upvote + 1 });
+  };
+
+  const handleDownvote = () => {
+    fetchAPI('put', `/api/streamers/${_id}/vote`, { downvote: downvote + 1 });
+  };
+
   return (
     <Container>
       <ImageThumb>
@@ -33,6 +44,9 @@ export const StreamersCard = ({
         <StyledGenre>
           Genre: <span>{genre}</span>
         </StyledGenre>
+        <StyledRating>
+          Rating: <span>{rating ? rating : 0}</span>
+        </StyledRating>
         <VoteThumb>
           <UpvotesText>
             <ImArrowUp /> {upvote}
@@ -41,11 +55,10 @@ export const StreamersCard = ({
             <ImArrowDown />
             {downvote}
           </DownvotesText>
-          <UpvoteBtn>
+          <UpvoteBtn onClick={handleUpvote}>
             <FaRegThumbsUp /> Upvote
           </UpvoteBtn>
-          <DownvoteBtn>
-            {' '}
+          <DownvoteBtn onClick={handleDownvote}>
             <FaRegThumbsDown /> Downvote
           </DownvoteBtn>
         </VoteThumb>

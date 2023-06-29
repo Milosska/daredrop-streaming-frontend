@@ -18,7 +18,7 @@ export const App = () => {
             <Route index element={<HomePage />} />
             <Route path="/streamers" element={<StreamersPage />} />
             <Route
-              path="/streamers/:streamersId"
+              path="/streamers/:streamerId"
               element={<StreamerRecordPage />}
             />
             <Route path="*" element={<NotFoundPage />} />
