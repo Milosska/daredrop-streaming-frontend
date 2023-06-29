@@ -11,6 +11,8 @@ const lightThemeColors = {
   bgColors: {
     mainBg: '#FFFFFF',
     overlayBg: 'rgba(255, 255, 255, 0.6)',
+    fileInputBg: '#e9e5e5',
+    fileInputHoverBg: '#ccc9c9',
   },
   textColors: {
     mainText: '#000000',
@@ -25,6 +27,8 @@ const darkThemeColors = {
   bgColors: {
     mainBg: '#303030',
     overlayBg: 'rgba(48, 48, 48, 0.6)',
+    fileInputBg: '#525252',
+    fileInputHoverBg: '#767575',
   },
   textColors: {
     mainText: '#FFFFFF',

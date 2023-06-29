@@ -1,19 +1,25 @@
 import {
-  StyledInput,
+  StyledTextarea,
   ValidationThumb,
   StyledValidation,
-} from './GeneralInput.styled';
+} from './TextareaInput.styled';
 
-export const GeneralInput = ({ type, name, placeholder, formik, submited }) => {
+export const TextareaInput = ({
+  name,
+  rows,
+  placeholder,
+  formik,
+  submited,
+}) => {
   return (
     <ValidationThumb>
-      <StyledInput
-        type={type}
+      <StyledTextarea
         name={name}
+        rows={rows}
         placeholder={placeholder}
-        onChange={formik.handleChange}
         value={formik.values[`${name}`]}
         submited={submited}
+        onChange={formik.handleChange}
         error={formik.errors[`${name}`]}
       />
       {formik.touched[`${name}`] && (

@@ -17,7 +17,7 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    width: 700px;
+    width: 900px;
   }
 `;
 
@@ -40,15 +40,10 @@ export const FormBg = styled.div`
 export const StyledForm = styled.form`
   position: relative;
   z-index: 10;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  font-size: 18px;
 `;
 
 export const StyledFormTitle = styled.h3`
+  margin-bottom: 10px;
   font-family: 'MontserratBold';
   font-size: 18px;
 
@@ -58,6 +53,27 @@ export const StyledFormTitle = styled.h3`
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
+  }
+`;
+
+export const StyledFormLayoutThumb = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 40px;
   }
 `;
 
@@ -77,9 +93,13 @@ export const StyledLabel = styled.label`
 `;
 
 export const SubmitBtn = styled.button`
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: inline-block;
   padding: 8px 20px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 
   background-color: transparent;
   border: 3px solid ${({ theme }) => theme.commonColors.accentElemBg};
@@ -99,13 +119,12 @@ export const SubmitBtn = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    margin: 10px auto 0;
     padding: 8px 20px;
-
     font-size: 18px;
   }
 
   @media screen and (min-width: 1200px) {
+    left: 90%;
     font-size: 22px;
   }
 `;

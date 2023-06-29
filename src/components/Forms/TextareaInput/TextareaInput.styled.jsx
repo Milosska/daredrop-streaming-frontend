@@ -10,10 +10,12 @@ const validateColor = (error, submited, theme, color) => {
   }
 };
 
-export const StyledInput = styled.input`
+export const StyledTextarea = styled.textarea`
   width: 100%;
+  height: 150px;
   margin: 8px 0 0;
   padding: 5px 10px;
+  resize: none;
   border-radius: 5px;
   border: 1px solid rgba(220, 227, 229, 0.6);
 
@@ -30,14 +32,29 @@ export const StyledInput = styled.input`
     color: rgba(220, 227, 229, 0.6);
   }
 
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: ${({ theme }) => theme.commonColors.linksBg};
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: ${({ theme }) => theme.commonColors.linksBg};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.commonColors.accentElemBg};
+  }
+
   @media screen and (min-width: 768px) {
-    padding: 8px 20px;
+    padding: 10px 20px;
     border-radius: 8px;
 
     font-size: 16px;
   }
 
   @media screen and (min-width: 1200px) {
+    height: 230px;
     font-size: 18px;
   }
 `;
