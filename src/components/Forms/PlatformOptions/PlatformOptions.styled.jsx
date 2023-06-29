@@ -9,9 +9,10 @@ export const Container = styled.div`
 
   width: 100%;
   height: 100px;
+  padding: 5px 0;
 
   @media screen and (min-width: 768px) {
-    height: 80px;
+    height: 120px;
   }
 `;
 

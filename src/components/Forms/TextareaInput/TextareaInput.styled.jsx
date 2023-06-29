@@ -54,7 +54,7 @@ export const StyledTextarea = styled.textarea`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 230px;
+    height: 275px;
     font-size: 18px;
   }
 `;

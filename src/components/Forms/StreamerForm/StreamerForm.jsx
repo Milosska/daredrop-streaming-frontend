@@ -10,6 +10,8 @@ import { FileInput } from '../FileInput/FileInput';
 import { platformOptions } from '../PlatformOptions/PlatformOptions';
 import { genreOptions } from 'assets/data/SelectGenresOptionData';
 
+import { fetchAPI } from 'helpers/backendAPI';
+
 import {
   Container,
   FormBg,
@@ -35,10 +37,14 @@ export const StreamerForm = () => {
     },
     validationSchema: StreamerRegisterSchema,
     onSubmit: (values, { resetForm }) => {
-      values.genre = userChoice.genre;
-      values.platform = userChoice.platform;
-      values.photo = isFile;
-      console.log(values);
+      const formData = new FormData();
+      formData.append('name', values.name);
+      formData.append('genre', userChoice.genre);
+      formData.append('platform', userChoice.platform);
+      formData.append('description', values.description);
+      formData.append('photo', isFile);
+
+      fetchAPI('post', '/api/streamers', formData);
       resetForm();
       setIsFile(null);
       setIsSubmited('false');
