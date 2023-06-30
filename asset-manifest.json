@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/daredrop-streaming-frontend/static/css/main.22de9937.css",
-    "main.js": "/daredrop-streaming-frontend/static/js/main.220ec57a.js",
+    "main.js": "/daredrop-streaming-frontend/static/js/main.4005363a.js",
     "static/js/913.829ceb03.chunk.js": "/daredrop-streaming-frontend/static/js/913.829ceb03.chunk.js",
-    "static/js/71.e3b84be1.chunk.js": "/daredrop-streaming-frontend/static/js/71.e3b84be1.chunk.js",
-    "static/js/914.9c0d6a76.chunk.js": "/daredrop-streaming-frontend/static/js/914.9c0d6a76.chunk.js",
+    "static/js/71.ac57d2f2.chunk.js": "/daredrop-streaming-frontend/static/js/71.ac57d2f2.chunk.js",
+    "static/js/914.f64a8a8e.chunk.js": "/daredrop-streaming-frontend/static/js/914.f64a8a8e.chunk.js",
     "static/js/960.4e3a469b.chunk.js": "/daredrop-streaming-frontend/static/js/960.4e3a469b.chunk.js",
     "static/js/673.a96f40d0.chunk.js": "/daredrop-streaming-frontend/static/js/673.a96f40d0.chunk.js",
     "static/js/349.904fd0bf.chunk.js": "/daredrop-streaming-frontend/static/js/349.904fd0bf.chunk.js",
@@ -26,10 +26,10 @@
     "static/media/streamers_bg-min.png": "/daredrop-streaming-frontend/static/media/streamers_bg-min.e54cfcfedbde8c0def37.png",
     "index.html": "/daredrop-streaming-frontend/index.html",
     "main.22de9937.css.map": "/daredrop-streaming-frontend/static/css/main.22de9937.css.map",
-    "main.220ec57a.js.map": "/daredrop-streaming-frontend/static/js/main.220ec57a.js.map",
+    "main.4005363a.js.map": "/daredrop-streaming-frontend/static/js/main.4005363a.js.map",
     "913.829ceb03.chunk.js.map": "/daredrop-streaming-frontend/static/js/913.829ceb03.chunk.js.map",
-    "71.e3b84be1.chunk.js.map": "/daredrop-streaming-frontend/static/js/71.e3b84be1.chunk.js.map",
-    "914.9c0d6a76.chunk.js.map": "/daredrop-streaming-frontend/static/js/914.9c0d6a76.chunk.js.map",
+    "71.ac57d2f2.chunk.js.map": "/daredrop-streaming-frontend/static/js/71.ac57d2f2.chunk.js.map",
+    "914.f64a8a8e.chunk.js.map": "/daredrop-streaming-frontend/static/js/914.f64a8a8e.chunk.js.map",
     "960.4e3a469b.chunk.js.map": "/daredrop-streaming-frontend/static/js/960.4e3a469b.chunk.js.map",
     "673.a96f40d0.chunk.js.map": "/daredrop-streaming-frontend/static/js/673.a96f40d0.chunk.js.map",
     "349.904fd0bf.chunk.js.map": "/daredrop-streaming-frontend/static/js/349.904fd0bf.chunk.js.map",
@@ -37,6 +37,6 @@
   },
   "entrypoints": [
     "static/css/main.22de9937.css",
-    "static/js/main.220ec57a.js"
+    "static/js/main.4005363a.js"
   ]
 }
