@@ -124,7 +124,7 @@ StreamersCard.propTypes = {
     photoURL: PropTypes.string,
     genre: PropTypes.string.isRequired,
     platform: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
+    rating: PropTypes.number,
     upvote: PropTypes.number.isRequired,
     downvote: PropTypes.number.isRequired,
   }).isRequired,

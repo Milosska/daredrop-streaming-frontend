@@ -50,6 +50,7 @@ const otherColors = {
     errorCodeText: '#880e4f',
     inputErrorText: '#DA1414',
     inputCorrectText: '#228054',
+    disabledBtnText: '#00000057',
   },
 };
 

@@ -16,8 +16,8 @@ export const genreOptions = [
     label: 'Creative',
   },
   {
-    value: 'educatuinal',
-    label: 'Educatuinal',
+    value: 'educational',
+    label: 'Educational',
   },
   {
     value: 'games',

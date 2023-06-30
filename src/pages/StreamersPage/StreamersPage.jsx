@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchAPI } from 'helpers/backendAPI';
+import { getStreamersAPI } from 'helpers/backendAPI';
 
 import { HeroBg } from 'components/Decoration/HeroBg/HeroBg';
 import * as heroBg from 'assets/images/main/hero-min.jpg';
@@ -7,6 +7,7 @@ import * as bigHeroBg from 'assets/images/main/hero@2x-min.jpg';
 
 import { StreamerForm } from 'components/Forms/StreamerForm/StreamerForm';
 import { StreamersList } from 'components/StreamersList/StreamersList';
+import { Controllers } from 'components/Controllers/Controllers';
 import {
   HeroSection,
   HeroSubtitle,
@@ -20,12 +21,19 @@ import {
 
 const StreamersPage = () => {
   const [streamers, setStreamers] = useState([]);
+  const [page, setPage] = useState(1);
+  const [maxPages, setMaxPages] = useState(0);
+  const limit = 6;
+
+  console.log(page);
 
   useEffect(() => {
     const getStreamers = async () => {
       try {
-        const response = await fetchAPI('get', '/api/streamers');
+        const response = await getStreamersAPI(page, limit);
         setStreamers(response.results);
+        const maxResultPages = Math.ceil(response.totalCount / limit);
+        setMaxPages(maxResultPages);
       } catch (err) {
         console.error(err);
       }
@@ -38,7 +46,7 @@ const StreamersPage = () => {
     return () => {
       clearInterval(timerId);
     };
-  }, []);
+  }, [page, limit]);
 
   return (
     <>
@@ -54,8 +62,11 @@ const StreamersPage = () => {
       <StreamersSection>
         <StreamersSectionTitle>
           Dare Drop <TitleAccent>Top Streamers</TitleAccent>
-          <StreamersList streamers={streamers} />
         </StreamersSectionTitle>
+        <StreamersList streamers={streamers} />
+        {maxPages > 1 && (
+          <Controllers page={page} maxPages={maxPages} setPage={setPage} />
+        )}
       </StreamersSection>
     </>
   );

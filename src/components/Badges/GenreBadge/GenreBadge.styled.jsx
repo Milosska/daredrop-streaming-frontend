@@ -14,7 +14,7 @@ const setColor = genre => {
     case 'creative':
       return 'rgba(210, 226, 246, 0.8)';
 
-    case 'educatuional':
+    case 'educational':
       return 'rgba(242, 246, 186, 0.8)';
 
     case 'games':
