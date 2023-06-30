@@ -1,4 +1,5 @@
 import 'modern-normalize';
+import '@smastrom/react-rating/style.css';
 import { ThemeProvider, StyleSheetManager } from 'styled-components';
 import { useSelector } from 'react-redux';
 import { selectCurrentTheme } from 'redux/selectors';
@@ -45,6 +46,7 @@ const otherColors = {
     linksBg: '#C5CAE9',
     socialsBg: '#0000001F',
     contrastText: '#FFFFFF',
+    contrastDarkText: '#303030',
     errorCodeText: '#880e4f',
     inputErrorText: '#DA1414',
     inputCorrectText: '#228054',

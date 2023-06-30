@@ -20,7 +20,7 @@ const setBigBgImage = (theme, img) => {
 
 export const HeroHeaderBg = styled.div`
   position: absolute;
-  top: -10%;
+  top: -100px;
   left: -10%;
   z-index: -1;
   width: 120%;
@@ -30,7 +30,7 @@ export const HeroHeaderBg = styled.div`
   background-image: ${prop => setBgImage(prop.theme, prop.image)};
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;

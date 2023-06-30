@@ -49,7 +49,7 @@ export const HeroTitle = styled.h1`
 `;
 
 export const FormSection = styled.section`
-  padding: 20px 40px;
+  padding: 40px;
 `;
 
 export const FormSectionTitle = styled.h2`

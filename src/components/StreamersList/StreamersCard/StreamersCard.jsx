@@ -4,6 +4,7 @@ import { ImArrowUp, ImArrowDown } from 'react-icons/im';
 import { FaRegThumbsUp, FaRegThumbsDown } from 'react-icons/fa';
 
 import { NavLinkBtn } from 'components/NavLinkBtn/NavLinkBtn';
+
 import {
   Container,
   ImageThumb,
