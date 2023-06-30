@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StyledInput,
   ValidationThumb,
@@ -25,4 +26,12 @@ export const GeneralInput = ({ type, name, placeholder, formik, submited }) => {
       )}
     </ValidationThumb>
   );
+};
+
+GeneralInput.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  formik: PropTypes.object.isRequired,
+  submited: PropTypes.string.isRequired,
 };

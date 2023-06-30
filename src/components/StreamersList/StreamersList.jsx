@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StreamersCard } from './StreamersCard/StreamersCard';
 import { StyledList } from './StreamersList.styled';
 
@@ -9,4 +10,8 @@ export const StreamersList = ({ streamers }) => {
       })}
     </StyledList>
   );
+};
+
+StreamersList.propTypes = {
+  streamers: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

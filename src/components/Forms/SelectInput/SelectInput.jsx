@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectCurrentTheme } from 'redux/selectors';
@@ -40,4 +41,11 @@ export const SelectInput = ({ name, options, setUserChoice, defaultValue }) => {
       />
     </>
   );
+};
+
+SelectInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setUserChoice: PropTypes.func.isRequired,
+  defaultValue: PropTypes.object,
 };

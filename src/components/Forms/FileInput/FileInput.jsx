@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StyledLabel,
   StyledInput,
@@ -49,4 +50,12 @@ export const FileInput = ({ name, formik, submited, isFile, setIsFile }) => {
       )}
     </ValidationThumb>
   );
+};
+
+FileInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  formik: PropTypes.object.isRequired,
+  submited: PropTypes.string.isRequired,
+  isFile: PropTypes.object,
+  setIsFile: PropTypes.func.isRequired,
 };

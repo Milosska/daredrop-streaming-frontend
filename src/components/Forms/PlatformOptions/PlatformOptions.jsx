@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { platformOptionsData } from 'assets/data/SelectPlatformOptionData';
 
 import {
@@ -31,3 +32,9 @@ export const platformOptions = platformOptionsData.map(
     };
   }
 );
+
+OptionLabel.propTypes = {
+  platformName: PropTypes.string.isRequired,
+  imgURL: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};

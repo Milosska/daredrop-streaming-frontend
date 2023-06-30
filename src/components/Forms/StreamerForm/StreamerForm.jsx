@@ -113,7 +113,7 @@ export const StreamerForm = () => {
               Add streamer activity description
               <TextareaInput
                 name="description"
-                rows="5"
+                rows={5}
                 placeholder="Enter streamer activity description"
                 submited={isSubmited}
                 formik={formik}

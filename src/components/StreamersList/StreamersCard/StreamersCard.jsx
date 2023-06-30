@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { fetchAPI } from 'helpers/backendAPI';
 
 import { ImArrowUp, ImArrowDown } from 'react-icons/im';
@@ -67,4 +68,17 @@ export const StreamersCard = ({
       <NavLinkBtn direction={`/streamers/${_id}`} text="View Details" />
     </Container>
   );
+};
+
+StreamersCard.propTypes = {
+  streamer: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    photoURL: PropTypes.string,
+    genre: PropTypes.string.isRequired,
+    platform: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    upvote: PropTypes.number.isRequired,
+    downvote: PropTypes.number.isRequired,
+  }).isRequired,
 };

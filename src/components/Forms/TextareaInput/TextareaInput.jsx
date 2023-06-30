@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StyledTextarea,
   ValidationThumb,
@@ -31,4 +32,12 @@ export const TextareaInput = ({
       )}
     </ValidationThumb>
   );
+};
+
+TextareaInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  rows: PropTypes.number.isRequired,
+  placeholder: PropTypes.string,
+  formik: PropTypes.object.isRequired,
+  submited: PropTypes.string.isRequired,
 };

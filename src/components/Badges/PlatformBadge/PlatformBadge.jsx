@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { platformOptionsData } from 'assets/data/SelectPlatformOptionData';
 import { Container, StyledImg, StyledLabel } from './PlatformBadge.styled';
 
@@ -19,4 +20,9 @@ export const PlatformBadge = ({ platform, height }) => {
       )}
     </>
   );
+};
+
+PlatformBadge.propTypes = {
+  platform: PropTypes.string.isRequired,
+  height: PropTypes.number,
 };
