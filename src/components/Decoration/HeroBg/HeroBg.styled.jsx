@@ -24,7 +24,7 @@ export const HeroHeaderBg = styled.div`
   left: -10%;
   z-index: -1;
   width: 120%;
-  height: 700px;
+  height: 600px;
 
   background-color: #f18585;
   background-image: ${prop => setBgImage(prop.theme, prop.image)};
@@ -41,7 +41,7 @@ export const HeroHeaderBg = styled.div`
     background-image: ${prop => setBigBgImage(prop.theme, prop.bigimage)};
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     height: 700px;
   }
 `;

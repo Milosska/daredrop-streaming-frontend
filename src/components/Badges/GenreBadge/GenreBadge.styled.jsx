@@ -43,10 +43,9 @@ const setColor = genre => {
   }
 };
 
-export const StyledGenreBadge = styled.span`
+export const StyledGenreBadge = styled.p`
   display: inline-block;
   padding: 1% 8%;
-  margin: 0 auto;
 
   background-color: ${({ genre }) => setColor(genre)};
   border: 1px solid ${({ genre }) => setColor(genre)};

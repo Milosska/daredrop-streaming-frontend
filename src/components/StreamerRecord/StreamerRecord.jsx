@@ -8,6 +8,7 @@ import {
   GeneralThumb,
   StreamerInfoThumb,
   RatingNumber,
+  GenreThumb,
   PlatformThumb,
   ParameterLable,
   StyledDescription,
@@ -31,31 +32,28 @@ export const StreamerRecord = ({
       <GeneralThumb>
         <StreamerInfoThumb>
           <Rating
-            style={{ width: 180, justifySelf: 'end', marginRight: 15 }}
+            style={{ maxWidth: 180, justifySelf: 'end', marginRight: 15 }}
             value={rating}
             itemStyles={customStyles}
             readOnly
           />
           <RatingNumber>{rating}</RatingNumber>
-          <p>
+          <GenreThumb>
             <ParameterLable>Genre:</ParameterLable>
-            <GenreBadge
-              genre={genre}
-              styles={{ gridRow: '4 / 5', gridColumn: '2 / 4' }}
-            />
-          </p>
+            <GenreBadge genre={genre} />
+          </GenreThumb>
           <PlatformThumb>
             <ParameterLable>Platform:</ParameterLable>
             <PlatformBadge platform={platform} height={25} />
           </PlatformThumb>
         </StreamerInfoThumb>
+        <ImageThumb>
+          <StyledImage src={photoURL} alt={name} />
+        </ImageThumb>
         <StyledDescription>
           <ParameterLable>Activity description:</ParameterLable>
           {description}
         </StyledDescription>
-        <ImageThumb>
-          <StyledImage src={photoURL} alt={name} />
-        </ImageThumb>
       </GeneralThumb>
     </StyledSection>
   );
