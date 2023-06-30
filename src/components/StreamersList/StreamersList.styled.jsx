@@ -8,7 +8,7 @@ export const StyledList = styled.ul`
 
   margin: 20px 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     gap: 30px;
   }
 `;

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Rating, Star } from '@smastrom/react-rating';
+
+import { StaredRating } from 'components/Badges/Rating/StarRating';
 import { GenreBadge } from 'components/Badges/GenreBadge/GenreBadge';
 import { PlatformBadge } from '../Badges/PlatformBadge/PlatformBadge';
 import {
@@ -8,7 +9,6 @@ import {
   StyledTitle,
   GeneralThumb,
   StreamerInfoThumb,
-  RatingNumber,
   GenreThumb,
   PlatformThumb,
   ParameterLable,
@@ -20,12 +20,6 @@ import {
 export const StreamerRecord = ({
   streamer: { _id, name, photoURL, genre, platform, description, rating },
 }) => {
-  const customStyles = {
-    itemShapes: Star,
-    activeFillColor: '#FFAC33',
-    inactiveFillColor: '#CEC9C1',
-  };
-
   return (
     <>
       {_id && (
@@ -34,13 +28,10 @@ export const StreamerRecord = ({
           <StyledTitle>{name}</StyledTitle>
           <GeneralThumb>
             <StreamerInfoThumb>
-              <Rating
+              <StaredRating
+                rating={rating}
                 style={{ maxWidth: 180, justifySelf: 'end', marginRight: 15 }}
-                value={rating}
-                itemStyles={customStyles}
-                readOnly
               />
-              <RatingNumber>{rating}</RatingNumber>
               <GenreThumb>
                 <ParameterLable>Genre:</ParameterLable>
                 <GenreBadge genre={genre} />

@@ -4,6 +4,9 @@ import { fetchAPI } from 'helpers/backendAPI';
 import { ImArrowUp, ImArrowDown } from 'react-icons/im';
 import { FaRegThumbsUp, FaRegThumbsDown } from 'react-icons/fa';
 
+import { StaredRating } from 'components/Badges/Rating/StarRating';
+import { PlatformBadge } from 'components/Badges/PlatformBadge/PlatformBadge';
+import { GenreBadge } from 'components/Badges/GenreBadge/GenreBadge';
 import { NavLinkBtn } from 'components/NavLinkBtn/NavLinkBtn';
 
 import {
@@ -12,9 +15,6 @@ import {
   StyledImg,
   InfoThumb,
   CardTitle,
-  StyledPlatform,
-  StyledGenre,
-  StyledRating,
   UpvotesText,
   DownvotesText,
   VoteThumb,
@@ -40,15 +40,12 @@ export const StreamersCard = ({
       </ImageThumb>
       <InfoThumb>
         <CardTitle>{name}</CardTitle>
-        <StyledPlatform>
-          Patform: <span>{platform}</span>
-        </StyledPlatform>
-        <StyledGenre>
-          Genre: <span>{genre}</span>
-        </StyledGenre>
-        <StyledRating>
-          Rating: <span>{rating ? rating : 0}</span>
-        </StyledRating>
+        <StaredRating
+          rating={rating}
+          style={{ maxWidth: 90, justifySelf: 'end', marginRight: 15 }}
+        />
+        <PlatformBadge platform={platform} height={20} />
+        <GenreBadge genre={genre} />
         <VoteThumb>
           <UpvotesText>
             <ImArrowUp /> {upvote}

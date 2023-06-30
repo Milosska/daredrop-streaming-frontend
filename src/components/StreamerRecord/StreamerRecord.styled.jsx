@@ -8,9 +8,11 @@ export const StyledSubtitle = styled.p`
   margin-bottom: 10px;
   font-family: 'MontserratMedium';
   font-size: 14px;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
+    text-align: left;
   }
 
   @media screen and (min-width: 1200px) {
@@ -24,10 +26,12 @@ export const StyledTitle = styled.h2`
   color: ${({ theme }) => theme.textColors.accentText};
   font-family: 'MontserratBold';
   font-size: 24px;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 20px;
     font-size: 36px;
+    text-align: left;
   }
 
   @media screen and (min-width: 1200px) {
@@ -71,20 +75,15 @@ export const StreamerInfoThumb = styled.div`
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
-`;
 
-export const RatingNumber = styled.p`
-  height: 20px;
-  padding-left: 15px;
-  align-self: center;
+  div:first-child {
+    grid-row: 1 /2;
+    grid-column: 1 / 3;
+    justify-self: center;
 
-  font-size: 16px;
-
-  border-left: 2px solid ${({ theme }) => theme.textColors.mainText};
-
-  @media screen and (min-width: 768px) {
-    height: 25px;
-    font-size: 22px;
+    @media screen and (min-width: 768px) {
+      justify-self: left;
+    }
   }
 `;
 

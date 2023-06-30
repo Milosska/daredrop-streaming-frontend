@@ -4,7 +4,6 @@ export const Container = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   justify-content: center;
 
   width: 100%;
@@ -21,12 +20,18 @@ export const Container = styled.li`
   );
 
   @media screen and (min-width: 480px) {
+    gap: 10px;
     width: 450px;
+    padding: 15px 10px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 350px;
+    width: 320px;
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 350px;
   }
 `;
 
@@ -58,6 +63,11 @@ export const ImageThumb = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    width: 110px;
+    height: 50%;
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 130px;
     height: 50%;
   }
@@ -73,16 +83,33 @@ export const InfoThumb = styled.div`
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
   justify-items: center;
   align-items: center;
 
   width: 100%;
   height: 85%;
 
+  font-family: 'MontserratMedium';
   font-size: 14px;
 
   @media screen and (min-width: 768px) {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  & div:nth-child(2) {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+  }
+
+  & div:nth-child(3) {
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+  }
+
+  & p:nth-child(4) {
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
   }
 `;
 
@@ -97,25 +124,6 @@ export const CardTitle = styled.h4`
   @media screen and (min-width: 768px) {
     font-size: 22px;
   }
-`;
-
-export const StyledPlatform = styled.p`
-  grid-row: 3 / 4;
-  grid-column: 2 / 4;
-
-  font-family: 'MontserratMedium';
-`;
-
-export const StyledGenre = styled.p`
-  grid-row: 4 / 5;
-  grid-column: 2 / 4;
-
-  font-family: 'MontserratMedium';
-`;
-
-export const StyledRating = styled.p`
-  grid-row: 5 / 6;
-  grid-column: 2 / 4;
 `;
 
 export const VoteThumb = styled.div`
@@ -186,6 +194,11 @@ export const UpvoteBtn = styled.button`
 
   @media screen and (min-width: 768px) {
     min-width: 150px;
+    padding: 5px 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 5px 20px;
   }
 
   > svg {
