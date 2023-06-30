@@ -192,6 +192,11 @@ export const UpvoteBtn = styled.button`
     color: ${({ theme }) => theme.commonColors.contrastText};
   }
 
+  &:disabled {
+    background-color: ${({ theme }) => theme.commonColors.inputCorrectText};
+    color: ${({ theme }) => theme.commonColors.contrastText};
+  }
+
   @media screen and (min-width: 768px) {
     min-width: 150px;
     padding: 5px 15px;
@@ -219,6 +224,10 @@ export const DownvoteBtn = styled(UpvoteBtn)`
 
   &:hover,
   &:focus {
+    background-color: ${({ theme }) => theme.commonColors.inputErrorText};
+  }
+
+  &:disabled {
     background-color: ${({ theme }) => theme.commonColors.inputErrorText};
   }
 `;

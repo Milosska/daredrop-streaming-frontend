@@ -1,4 +1,19 @@
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
+
+import { useDispatch } from 'react-redux';
+import {
+  addUpvotedStreamers,
+  addDownvotedStreamers,
+  removeUpvotedStreamers,
+  removeDownvotedStreamers,
+} from 'redux/streamers/streamersSilce';
+import { useSelector } from 'react-redux';
+import {
+  selectUpvotedStreamers,
+  selectDownvotedStreamers,
+} from 'redux/selectors';
+
 import { fetchAPI } from 'helpers/backendAPI';
 
 import { ImArrowUp, ImArrowDown } from 'react-icons/im';
@@ -25,12 +40,46 @@ import {
 export const StreamersCard = ({
   streamer: { _id, name, photoURL, genre, platform, upvote, downvote, rating },
 }) => {
+  const [isUpvoted, setIsUpvoted] = useState(false);
+  const [isDownvoted, setIsDownvoted] = useState(false);
+  const upvotedStreamers = useSelector(selectUpvotedStreamers);
+  const downvotedStreamers = useSelector(selectDownvotedStreamers);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const upvotedState = upvotedStreamers.find(
+      streamerId => streamerId === _id
+    );
+    const downvotedState = downvotedStreamers.find(
+      streamerId => streamerId === _id
+    );
+
+    upvotedState ? setIsUpvoted(true) : setIsUpvoted(false);
+    downvotedState ? setIsDownvoted(true) : setIsDownvoted(false);
+  }, [upvotedStreamers, downvotedStreamers, _id]);
+
   const handleUpvote = () => {
-    fetchAPI('put', `/api/streamers/${_id}/vote`, { upvote: upvote + 1 });
+    if (isDownvoted) {
+      fetchAPI('put', `/api/streamers/${_id}/vote`, {
+        downvote: downvote - 1,
+      });
+      dispatch(removeDownvotedStreamers(_id));
+    } else {
+      fetchAPI('put', `/api/streamers/${_id}/vote`, { upvote: upvote + 1 });
+      dispatch(addUpvotedStreamers(_id));
+    }
   };
 
   const handleDownvote = () => {
-    fetchAPI('put', `/api/streamers/${_id}/vote`, { downvote: downvote + 1 });
+    if (isUpvoted) {
+      fetchAPI('put', `/api/streamers/${_id}/vote`, { upvote: upvote - 1 });
+      dispatch(removeUpvotedStreamers(_id));
+    } else {
+      fetchAPI('put', `/api/streamers/${_id}/vote`, {
+        downvote: downvote + 1,
+      });
+      dispatch(addDownvotedStreamers(_id));
+    }
   };
 
   return (
@@ -54,11 +103,12 @@ export const StreamersCard = ({
             <ImArrowDown />
             {downvote}
           </DownvotesText>
-          <UpvoteBtn onClick={handleUpvote}>
-            <FaRegThumbsUp /> Upvote
+          <UpvoteBtn onClick={handleUpvote} disabled={isUpvoted}>
+            <FaRegThumbsUp /> {isUpvoted ? 'Upvoted' : 'Upvote'}
           </UpvoteBtn>
-          <DownvoteBtn onClick={handleDownvote}>
-            <FaRegThumbsDown /> Downvote
+          <DownvoteBtn onClick={handleDownvote} disabled={isDownvoted}>
+            <FaRegThumbsDown />
+            {isDownvoted ? 'Downvoted' : 'Downvote'}
           </DownvoteBtn>
         </VoteThumb>
       </InfoThumb>

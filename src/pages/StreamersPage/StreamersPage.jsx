@@ -25,7 +25,7 @@ const StreamersPage = () => {
     const getStreamers = async () => {
       try {
         const response = await fetchAPI('get', '/api/streamers');
-        setStreamers(response);
+        setStreamers(response.results);
       } catch (err) {
         console.error(err);
       }
