@@ -67,7 +67,7 @@ export const TextThumb = styled.div`
   }
 `;
 
-export const Header = styled.h2`
+export const Header = styled.p`
   margin-bottom: 10px;
   font-family: 'MontserratBold';
   font-size: 22px;

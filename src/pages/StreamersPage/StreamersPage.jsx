@@ -8,7 +8,7 @@ import * as bigHeroBg from 'assets/images/main/hero@2x-min.jpg';
 import { StreamerForm } from 'components/Forms/StreamerForm/StreamerForm';
 import { FilterMenu } from 'components/FilterMenu/FilterMenu';
 import { StreamersList } from 'components/StreamersList/StreamersList';
-import { Controllers } from 'components/Controllers/Controllers';
+import { UserMessage } from 'components/UserMessage/UserMessage';
 import {
   HeroSection,
   HeroSubtitle,
@@ -21,6 +21,7 @@ import {
 } from './StreamersPage.styled';
 
 const StreamersPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [streamers, setStreamers] = useState([]);
   const [page, setPage] = useState(1);
   const [maxPages, setMaxPages] = useState(0);
@@ -28,6 +29,8 @@ const StreamersPage = () => {
   const limit = 6;
 
   useEffect(() => {
+    setIsLoading(true);
+
     const getStreamers = async () => {
       const params = { page, limit, ...userChoice };
 
@@ -38,6 +41,8 @@ const StreamersPage = () => {
         setMaxPages(maxResultPages);
       } catch (err) {
         console.error(err);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -66,9 +71,15 @@ const StreamersPage = () => {
           Dare Drop <TitleAccent>Top Streamers</TitleAccent>
         </StreamersSectionTitle>
         <FilterMenu setUserChoice={setUserChoice} />
-        <StreamersList streamers={streamers} />
-        {maxPages > 1 && (
-          <Controllers page={page} maxPages={maxPages} setPage={setPage} />
+        {isLoading ? (
+          <UserMessage>Please, wait. The data is fetching.</UserMessage>
+        ) : (
+          <StreamersList
+            streamers={streamers}
+            maxPages={maxPages}
+            page={page}
+            setPage={setPage}
+          />
         )}
       </StreamersSection>
     </>
