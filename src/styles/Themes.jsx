@@ -14,6 +14,7 @@ const lightThemeColors = {
     overlayBg: 'rgba(255, 255, 255, 0.6)',
     fileInputBg: '#e9e5e5',
     fileInputHoverBg: '#ccc9c9',
+    filterMenuBg: '#8630fe2c',
   },
   textColors: {
     mainText: '#000000',
@@ -30,6 +31,7 @@ const darkThemeColors = {
     overlayBg: 'rgba(48, 48, 48, 0.6)',
     fileInputBg: '#525252',
     fileInputHoverBg: '#767575',
+    filterMenuBg: '#caa4fe3d',
   },
   textColors: {
     mainText: '#FFFFFF',

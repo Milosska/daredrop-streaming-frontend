@@ -36,3 +36,26 @@ export const platformOptionsData = [
       'A platform where users can share and discover user-generated videos.',
   },
 ];
+
+export const platformFilterOptions = [
+  {
+    value: 'youtube',
+    label: 'YouTube',
+  },
+  {
+    value: 'tiktok',
+    label: 'TikTok',
+  },
+  {
+    value: 'twitch',
+    label: 'Twitch',
+  },
+  {
+    value: 'kick',
+    label: 'Kick',
+  },
+  {
+    value: 'rumble',
+    label: 'Rumble',
+  },
+];

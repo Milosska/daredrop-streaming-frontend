@@ -33,6 +33,10 @@ export const Container = styled.li`
   @media screen and (min-width: 1200px) {
     width: 350px;
   }
+
+  @media screen and (min-width: 1440px) {
+    width: 400px;
+  }
 `;
 
 export const ImageThumb = styled.div`
@@ -70,6 +74,11 @@ export const ImageThumb = styled.div`
   @media screen and (min-width: 1200px) {
     width: 130px;
     height: 50%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 150px;
+    height: 55%;
   }
 `;
 

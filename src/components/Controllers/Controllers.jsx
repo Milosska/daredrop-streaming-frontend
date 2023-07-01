@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { ImArrowLeft, ImArrowRight } from 'react-icons/im';
 import { Container, StyledBtn } from './Controllers.styled';
@@ -47,4 +48,10 @@ export const Controllers = ({ page, maxPages, setPage }) => {
       </StyledBtn>
     </Container>
   );
+};
+
+Controllers.propTypes = {
+  page: PropTypes.number.isRequired,
+  maxPages: PropTypes.number.isRequired,
+  setPage: PropTypes.func.isRequired,
 };

@@ -6,6 +6,7 @@ import * as heroBg from 'assets/images/main/hero-min.jpg';
 import * as bigHeroBg from 'assets/images/main/hero@2x-min.jpg';
 
 import { StreamerForm } from 'components/Forms/StreamerForm/StreamerForm';
+import { FilterMenu } from 'components/FilterMenu/FilterMenu';
 import { StreamersList } from 'components/StreamersList/StreamersList';
 import { Controllers } from 'components/Controllers/Controllers';
 import {
@@ -23,14 +24,15 @@ const StreamersPage = () => {
   const [streamers, setStreamers] = useState([]);
   const [page, setPage] = useState(1);
   const [maxPages, setMaxPages] = useState(0);
+  const [userChoice, setUserChoice] = useState({});
   const limit = 6;
-
-  console.log(page);
 
   useEffect(() => {
     const getStreamers = async () => {
+      const params = { page, limit, ...userChoice };
+
       try {
-        const response = await getStreamersAPI(page, limit);
+        const response = await getStreamersAPI(params);
         setStreamers(response.results);
         const maxResultPages = Math.ceil(response.totalCount / limit);
         setMaxPages(maxResultPages);
@@ -46,7 +48,7 @@ const StreamersPage = () => {
     return () => {
       clearInterval(timerId);
     };
-  }, [page, limit]);
+  }, [page, limit, userChoice]);
 
   return (
     <>
@@ -63,6 +65,7 @@ const StreamersPage = () => {
         <StreamersSectionTitle>
           Dare Drop <TitleAccent>Top Streamers</TitleAccent>
         </StreamersSectionTitle>
+        <FilterMenu setUserChoice={setUserChoice} />
         <StreamersList streamers={streamers} />
         {maxPages > 1 && (
           <Controllers page={page} maxPages={maxPages} setPage={setPage} />

@@ -6,6 +6,7 @@ import { SelectInput } from '../SelectInput/SelectInput';
 import { GeneralInput } from '../GeneralInput/GeneralInput';
 import { TextareaInput } from '../TextareaInput/TextareaInput';
 import { FileInput } from '../FileInput/FileInput';
+import { Button } from '../../Button/Button';
 
 import { platformOptions } from '../PlatformOptions/PlatformOptions';
 import { genreOptions } from 'assets/data/SelectGenresOptionData';
@@ -18,7 +19,6 @@ import {
   StyledForm,
   StyledFormTitle,
   StyledFormLayoutThumb,
-  SubmitBtn,
   StyledLabel,
 } from './StreamerForm.styled';
 
@@ -121,9 +121,7 @@ export const StreamerForm = () => {
             </StyledLabel>
           </div>
         </StyledFormLayoutThumb>
-        <SubmitBtn type="submit" onClick={handleValidation}>
-          Submit
-        </SubmitBtn>
+        <Button type="submit" text="Submit" onClick={handleValidation} />
       </StyledForm>
     </Container>
   );

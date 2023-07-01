@@ -2,11 +2,13 @@ import axios from 'axios';
 
 const BASE_URI = 'https://daredrop-streaming-backend.onrender.com';
 
-export const getStreamersAPI = async (page, limit) => {
+export const getStreamersAPI = async queryParams => {
   try {
-    const response = await axios.get(
-      `${BASE_URI}/api/streamers?page=${page}&limit=${limit}`
-    );
+    const response = await axios.get(`${BASE_URI}/api/streamers`, {
+      params: {
+        ...queryParams,
+      },
+    });
     return response.data;
   } catch (e) {
     if (axios.isCancel(e)) {
