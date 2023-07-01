@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { socket } from 'socket';
 import { getStreamersAPI } from 'helpers/backendAPI';
 
 import { HeroBg } from 'components/Decoration/HeroBg/HeroBg';
@@ -29,6 +30,31 @@ const StreamersPage = () => {
   const limit = 6;
 
   useEffect(() => {
+    socket.on(
+      'data-changed',
+      ({ documentKey: { _id }, updateDescription: { updatedFields } }) => {
+        // const changedData = Object.entries(updatedFields);
+        // console.log(changedData);
+
+        setStreamers(prevState => {
+          const newStreamers = prevState.map(streamer => {
+            if (streamer._id === _id) {
+              return { ...streamer, ...updatedFields };
+            } else {
+              return streamer;
+            }
+          });
+          return newStreamers;
+        });
+      }
+    );
+
+    return () => {
+      socket.off('data-changed');
+    };
+  }, [streamers]);
+
+  useEffect(() => {
     setIsLoading(true);
 
     const getStreamers = async () => {
@@ -46,13 +72,15 @@ const StreamersPage = () => {
       }
     };
 
-    const timerId = setInterval(() => {
-      getStreamers();
-    }, 2000);
+    getStreamers();
 
-    return () => {
-      clearInterval(timerId);
-    };
+    // const timerId = setInterval(() => {
+    //   getStreamers();
+    // }, 2000);
+
+    // return () => {
+    //   clearInterval(timerId);
+    // };
   }, [page, limit, userChoice]);
 
   return (
