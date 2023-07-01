@@ -33,9 +33,6 @@ const StreamersPage = () => {
     socket.on(
       'data-changed',
       ({ documentKey: { _id }, updateDescription: { updatedFields } }) => {
-        // const changedData = Object.entries(updatedFields);
-        // console.log(changedData);
-
         setStreamers(prevState => {
           const newStreamers = prevState.map(streamer => {
             if (streamer._id === _id) {
@@ -73,14 +70,6 @@ const StreamersPage = () => {
     };
 
     getStreamers();
-
-    // const timerId = setInterval(() => {
-    //   getStreamers();
-    // }, 2000);
-
-    // return () => {
-    //   clearInterval(timerId);
-    // };
   }, [page, limit, userChoice]);
 
   return (

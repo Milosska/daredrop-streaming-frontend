@@ -38,10 +38,11 @@ import {
 } from './StreamersCard.Styled';
 
 export const StreamersCard = ({
-  streamer: { _id, name, photoURL, genre, platform, upvote, downvote, rating },
+  streamer: { _id, name, photoURL, genre, platform, upvote, downvote },
 }) => {
   const [isUpvoted, setIsUpvoted] = useState(false);
   const [isDownvoted, setIsDownvoted] = useState(false);
+  const [rating, setRating] = useState(0);
   const upvotedStreamers = useSelector(selectUpvotedStreamers);
   const downvotedStreamers = useSelector(selectDownvotedStreamers);
   const dispatch = useDispatch();
@@ -57,6 +58,12 @@ export const StreamersCard = ({
     upvotedState ? setIsUpvoted(true) : setIsUpvoted(false);
     downvotedState ? setIsDownvoted(true) : setIsDownvoted(false);
   }, [upvotedStreamers, downvotedStreamers, _id]);
+
+  useEffect(() => {
+    const ratingRatio = upvote / (upvote + downvote);
+    const currentRating = Math.round(ratingRatio * 5 * 100) / 100;
+    setRating(currentRating);
+  }, [upvote, downvote]);
 
   const handleUpvote = () => {
     if (isDownvoted) {
