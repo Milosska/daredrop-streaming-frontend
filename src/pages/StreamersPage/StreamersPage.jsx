@@ -61,6 +61,10 @@ const StreamersPage = () => {
   }, [streamers]);
 
   useEffect(() => {
+    setPage(1);
+  }, [userChoice]);
+
+  useEffect(() => {
     setIsLoading(true);
 
     const getStreamers = async () => {
