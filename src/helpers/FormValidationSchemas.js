@@ -14,5 +14,19 @@ export const StreamerRegisterSchema = object().shape({
   description: string()
     .max(1000, 'Description should not exceed 1000 characters')
     .required('Description is required'),
-  photo: mixed(),
+  photo: mixed()
+    .test('fileSize', 'File too large', value => {
+      if (!value) {
+        return true;
+      }
+      const MAX_FILE_SIZE = 1024 * 1024;
+      return value.size <= MAX_FILE_SIZE;
+    })
+    .test('fileFormat', 'Unsupported format', value => {
+      if (!value) {
+        return true;
+      }
+      const supportedFormats = ['image/jpg', 'image/jpeg', 'image/png'];
+      return supportedFormats.includes(value.type);
+    }),
 });

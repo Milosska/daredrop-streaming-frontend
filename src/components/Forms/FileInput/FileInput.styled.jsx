@@ -24,7 +24,7 @@ export const StyledLabel = styled.label`
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid rgba(220, 227, 229, 0.6);
-  outline: 1px solid ${({ theme }) => theme.textColors.mainText};
+  outline: 1px dashed ${({ theme }) => theme.textColors.mainText};
   background-color: ${({ theme }) => theme.bgColors.fileInputBg};
   cursor: pointer;
 

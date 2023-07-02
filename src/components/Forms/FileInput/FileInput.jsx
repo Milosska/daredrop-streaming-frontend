@@ -7,8 +7,10 @@ import {
 } from './FileInput.styled';
 
 export const FileInput = ({ name, formik, submited, isFile, setIsFile }) => {
-  const handleFile = e => {
+  const handleFile = async e => {
     setIsFile(e.target.files[0]);
+    formik.setFieldValue('photo', e.target.files[0]);
+    await Promise.resolve();
   };
 
   const handleDrop = e => {
@@ -29,13 +31,13 @@ export const FileInput = ({ name, formik, submited, isFile, setIsFile }) => {
         onDrop={e => handleDrop(e)}
       >
         {isFile
-          ? `Photo ${isFile.name} is chosen`
+          ? `Streamer photo is chosen`
           : 'Click here to add streamer photo'}
 
         <StyledInput
           type="file"
           name={name}
-          value={formik.values[`${name}`]}
+          // value={formik.values[`${name}`]}
           submited={submited}
           error={formik.errors[`${name}`]}
           onChange={handleFile}

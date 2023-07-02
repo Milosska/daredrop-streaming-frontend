@@ -32,17 +32,26 @@ const StreamersPage = () => {
   useEffect(() => {
     socket.on(
       'data-changed',
-      ({ documentKey: { _id }, updateDescription: { updatedFields } }) => {
-        setStreamers(prevState => {
-          const newStreamers = prevState.map(streamer => {
-            if (streamer._id === _id) {
-              return { ...streamer, ...updatedFields };
-            } else {
-              return streamer;
-            }
+      ({
+        operationType,
+        fullDocument,
+        documentKey: { _id },
+        updateDescription,
+      }) => {
+        if (operationType === 'insert') {
+          setStreamers(prevState => [fullDocument, ...prevState]);
+        } else if (operationType === 'update') {
+          setStreamers(prevState => {
+            const newStreamers = prevState.map(streamer => {
+              if (streamer._id === _id) {
+                return { ...streamer, ...updateDescription.updatedFields };
+              } else {
+                return streamer;
+              }
+            });
+            return newStreamers;
           });
-          return newStreamers;
-        });
+        }
       }
     );
 
